@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,18 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private navCtrl: NavController) {}
+
+  openPageClientes(){
+    this.navCtrl.navigateForward('cliente/listagem');
+ }
+
+ openPageEmpreendimentos() {
+   console.log('clicou empreendimentos');
+ }
+
+ openPageContas() {
+  console.log('clicou contas');
+ }
 
 }

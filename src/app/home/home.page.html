@@ -14,7 +14,23 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <p>
+      <ion-chip outline color="primary" (click)="openPageClientes()">
+        <ion-icon name="accessibility-outline"></ion-icon>
+        <ion-label>Clientes</ion-label>
+      </ion-chip>
+      </p>
+      <p>
+      <ion-chip outline color="secondary" (click)="openPageEmpreendimentos()">
+        <ion-icon name="business-outline"></ion-icon>
+        <ion-label>Empreendimentos</ion-label>
+      </ion-chip>
+    </p>
+    <p>
+      <ion-chip outline color="tertiary" (click)="openPageContas()">
+        <ion-icon name="cash-outline"></ion-icon>
+        <ion-label>Contas</ion-label>
+      </ion-chip>
+    </p>
   </div>
 </ion-content>

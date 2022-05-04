@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Listagem de Clientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    
+  <ion-list>
+   
+    <!-- Multi-line sliding item with icon options on both sides -->
+    <ion-item-sliding id="item100">
+      <ion-item href="#">
+        <ion-label>
+          <h2>Jose da silva</h2>
+          <p>Rua floriano peixoto, 333</p>
+          <p>Itu/SP fone: (11)99999-9999</p>
+        </ion-label>
+        <ion-note slot="end">
+          10:45 AM
+        </ion-note>
+      </ion-item>
+
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="openPageClientes(1)">
+          <ion-icon slot="icon-only" name="search"></ion-icon>
+        </ion-item-option>
+        <ion-item-option  (click)="openPageEmpreendimentos(1)">
+          <ion-icon slot="icon-only" name="home"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  
+     </ion-list>
+</ion-content>
