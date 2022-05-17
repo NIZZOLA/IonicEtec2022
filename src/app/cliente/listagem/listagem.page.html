@@ -9,20 +9,20 @@
   <ion-list>
    
     <!-- Multi-line sliding item with icon options on both sides -->
-    <ion-item-sliding id="item100">
+    <ion-item-sliding *ngFor="let cli of resultado">
       <ion-item href="#">
         <ion-label>
-          <h2>Jose da silva</h2>
-          <p>Rua floriano peixoto, 333</p>
+          <h2>{{cli.nome}} {{cli.nomeFantasia}}</h2>
+          <p>{{cli.cpf}} {{cli.cnpj}}</p>
           <p>Itu/SP fone: (11)99999-9999</p>
         </ion-label>
         <ion-note slot="end">
-          10:45 AM
+          {{cli.id}}
         </ion-note>
       </ion-item>
 
       <ion-item-options side="end">
-        <ion-item-option color="danger" (click)="openPageClientes(1)">
+        <ion-item-option color="danger" (click)="openPageClientes(cli.id)">
           <ion-icon slot="icon-only" name="search"></ion-icon>
         </ion-item-option>
         <ion-item-option  (click)="openPageEmpreendimentos(1)">

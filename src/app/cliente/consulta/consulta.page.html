@@ -4,6 +4,40 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content *ngIf="cliente.fisica === true">
+    <h1>Consulta de cliente</h1>
 
+    <ion-card>
+      <ion-card-header>
+        <ion-card-subtitle>Cliente</ion-card-subtitle>
+        <ion-card-title>{{cliente.nome}}</ion-card-title>
+      </ion-card-header>
+    
+      <ion-card-header>
+        <ion-card-subtitle>Data de Nascimento</ion-card-subtitle>
+        <ion-card-title>{{cliente.dataDeNascimento}}</ion-card-title>
+      </ion-card-header>
+    
+
+      <ion-card-content>
+        {{cliente.observacoes}}
+      </ion-card-content>
+    </ion-card>
 </ion-content>
+
+
+<ion-content *ngIf="cliente.fisica === false">
+  <h1>Consulta de cliente empresarial</h1>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Cliente</ion-card-subtitle>
+      <ion-card-title>{{cliente.nomeFantasia}}</ion-card-title>
+    </ion-card-header>
+    
+    <ion-card-header>
+      <ion-card-subtitle>Razao Social</ion-card-subtitle>
+      <ion-card-title>{{cliente.razaoSocial}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  </ion-content>
