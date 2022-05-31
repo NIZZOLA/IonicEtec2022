@@ -16,11 +16,11 @@ export class HomePage {
  }
 
  openPageEmpreendimentos() {
-   console.log('clicou empreendimentos');
+  this.navCtrl.navigateForward('empreendimento/listagem');
  }
 
  openPageContas() {
-  console.log('clicou contas');
+  this.navCtrl.navigateForward('contas/listagem');
  }
 
 }
