@@ -11,6 +11,7 @@ import { ClienteService } from 'src/services/cliente.service';
 export class ListagemPage implements OnInit {
   resultado : any = [];
   constructor(private clientService: ClienteService, private navCtrl: NavController) {
+    console.log("carrega dados");
     this.CarregaDados();
    }
 
@@ -24,7 +25,7 @@ export class ListagemPage implements OnInit {
         this.resultado = json;
       })
       .catch((erro) => {
-        console.log(erro);
+        console.log("Erro ao carregar a requisição" + erro);
       });
   }
 
