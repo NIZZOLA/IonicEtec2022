@@ -26,12 +26,23 @@ export class ConsultaPage implements OnInit {
   ngOnInit() {
   }
 
+  TrataData(stringDate) {
+    if(stringDate) {
+       var dataArray =  stringDate.substring(0,10).split("-");
+       return dataArray[2]+"/"+dataArray[1]+"/"+dataArray[0];
+    }
+    return stringDate;
+  }
 
   CarregaEmpreendimento(idEmpreendimento) {
     this.empreendimentoService.getEmpreendimento(idEmpreendimento)
       .then((json) => {
 
         this.empreendimento = json;
+        this.empreendimento.dataOrcamento = this.TrataData( this.empreendimento.dataOrcamento);
+        this.empreendimento.dataInicio = this.TrataData(this.empreendimento.dataInicio);
+        this.empreendimento.dataTermino = this.TrataData(this.empreendimento.dataTermino);
+        this.empreendimento.dataPrevistaTermino = this.TrataData(this.empreendimento.dataPrevistaTermino);
         console.log(this.empreendimento);
       })
       .catch((erro) => {
