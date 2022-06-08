@@ -1,9 +1,43 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>listagem</ion-title>
+    <ion-buttons slot="start">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      
+    <ion-title><ion-icon name="cash-outline"></ion-icon> Listagem de Contas do<br> Empreendimento</ion-title>
+    
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true">
+    
+  <ion-list>
+   
+    <!-- Multi-line sliding item with icon options on both sides -->
+    <ion-item-sliding *ngFor="let conta of resultado">
+      <ion-item href="#">
+        <ion-label>
+          <h2>{{conta.fornecedor.nome}}</h2>
+          <p>{{conta.vencimento}} </p>
+          <p>{{conta.valor}}</p>
+          
+        </ion-label>
+        <ion-note slot="end">
+          {{conta.id}}
+        </ion-note>
+      </ion-item>
 
+      <ion-item-options side="end">
+        <ion-item-option color="danger" (click)="openDetalhes(conta.id)">
+          <ion-icon slot="icon-only" name="search"></ion-icon>
+        </ion-item-option>
+        <ion-item-option  (click)="openEditar(conta.id)">
+          <ion-icon slot="icon-only" name="home"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  
+     </ion-list>
 </ion-content>

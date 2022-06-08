@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { EmpreendimentoService } from 'src/services/empreendimento.service';
+import { ApiService } from '../../services/apiservice.service';
 
 @Component({
   selector: 'app-consulta',
@@ -11,7 +11,7 @@ export class ConsultaPage implements OnInit {
   id: any;
   empreendimento: any = [];
 
-  constructor(private empreendimentoService: EmpreendimentoService,
+  constructor(private empreendimentoService: ApiService,
     private route: ActivatedRoute,
     private router: Router) {
     this.route.queryParams.subscribe(params => {

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras } from '@angular/router';
 import { NavController } from '@ionic/angular';
-import { EmpreendimentoService } from '../../../services/empreendimento.service';
+import { ApiService } from '../../services/apiservice.service';
+
 
 @Component({
   selector: 'app-listagem',
@@ -11,7 +12,7 @@ import { EmpreendimentoService } from '../../../services/empreendimento.service'
 export class ListagemPage implements OnInit {
   resultado : any = [];
   
-  constructor(private empreendService: EmpreendimentoService, 
+  constructor(private empreendService: ApiService, 
               private navCtrl: NavController) {
                   this.CarregaDados();
                  }
@@ -40,6 +41,9 @@ export class ListagemPage implements OnInit {
   }
  
   openPageContas(idEmpreendimento: number) {
-     this.navCtrl.navigateForward('contas/listagem')
+     let navExtras: NavigationExtras = {
+      state: { empreendimentoId: idEmpreendimento }
+     }
+     this.navCtrl.navigateForward('conta/listagem', navExtras);
   }
 }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AnyForUntypedForms } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClienteFornecedorModel } from 'src/app/model/clienteFornecedorModel';
-import { ClienteService } from 'src/services/cliente.service';
+import { ApiService } from '../../services/apiservice.service';
 
 @Component({
   selector: 'app-consulta',
@@ -14,7 +14,7 @@ export class ConsultaPage implements OnInit {
   id : any;
   cliente: any = []; //ClienteFornecedorModel;
 
-  constructor(private clientService: ClienteService,
+  constructor(private clientService: ApiService,
               private route: ActivatedRoute, 
               private router: Router) 
     {
