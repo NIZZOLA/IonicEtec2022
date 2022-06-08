@@ -1,0 +1,108 @@
+{
+    "clientes": [
+        {
+            "id" : "6ee05544-0623-423b-9be6-37517912121f",
+            "cliente": true,
+            "fornecedor": false,
+            "fisica": true,
+            "nome": "JOSE DA SILVA",
+            "cpf": "000.000.000-00",
+            "dataDeNascimento": "2000-09-14",
+            "nomeFantasia": "",
+            "razaoSocial": "",
+            "cnpj": "",
+            "inscricaoEstadual": "",
+            "optanteDoSimples": false,
+            "observacoes": "MAL PAGADOR"
+        },
+        {
+            "id" : "6ee05544-0623-423b-9be6-37517912121f",
+            "cliente": true,
+            "fornecedor": false,
+            "fisica": true,
+            "nome": "DARTH VADER",
+            "cpf": "000.000.000-00",
+            "dataDeNascimento": "2000-09-14",
+            "nomeFantasia": "",
+            "razaoSocial": "",
+            "cnpj": "",
+            "inscricaoEstadual": "",
+            "optanteDoSimples": false,
+            "observacoes": "FOI PARA O LADO OBSCURO DA FORÇA"
+        },
+        {
+            "id" : "39a4758e-de2f-47ea-997c-fe66db00d43e",
+            "cliente": true,
+            "fornecedor": false,
+            "fisica": false,
+            "nome": "",
+            "cpf": "",
+            "dataDeNascimento": "",
+            "nomeFantasia": "ETEC ITU",
+            "razaoSocial": "CENTRO PAULA SOUZA DE ENSINO",
+            "cnpj": "00.001.002/0001-22",
+            "inscricaoEstadual": "345.555.888-99",
+            "optanteDoSimples": false,
+            "observacoes": "TESTE"
+        }
+    ],
+    "empreendimentos" : [
+        {
+            "nome": "CASA NA ARVORE",
+            "clienteId": "39a4758e-de2f-47ea-997c-fe66db00d43e",
+            "cliente": "ETEC ITU",
+            "dataOrcamento": "2022-01-01T00:00:00",
+            "dataInicio": "2022-02-01T00:00:00",
+            "dataPrevistaTermino": "2023-01-01T00:00:00",
+            "dataTermino": null,
+            "enderecos": [{
+                "logradouro": "AV BARATA RIBEIRO",
+                "numero": 400,
+                "bairro": "RANCHO GRANDE",
+                "cidadeId": 1,
+                "cidade": { "NomeCidade": "ITU", "Estado" : "SP" },
+                "cep": "13.300-199",
+                "tipo": 1,
+                "latitude": -26.0,
+                "longitude": -47.0,
+                "id": "5f6204e1-49ef-44f5-a8d3-342fe2ecf90b"
+              },
+              {
+                "logradouro": "AV TIRADENTES, S/N",
+                "numero": 0,
+                "bairro": "PARQUE INDUSTRIAL",
+                "cidadeId": 1,
+                "cidade": { "NomeCidade": "ITU", "Estado" : "SP" },
+                "cep": "13.300-199",
+                "tipo": 1,
+                "latitude": -26.0,
+                "longitude": -47.0,
+                "id": "5f6204e1-49ef-44f5-a8d3-342fe2ecf90b"
+              }
+            ],
+            "id": "f95e566d-3f3e-4ab9-bab3-34326a387389"
+          },
+          {
+            "nome": "CONSTRUÇÃO DE LABORATÓRIOS",
+            "clienteId": "39a4758e-de2f-47ea-997c-fe66db00d43e",
+            "cliente": "ETEC ITU",
+            "dataOrcamento": "2022-01-01T00:00:00",
+            "dataInicio": "2022-02-01T00:00:00",
+            "dataPrevistaTermino": "2023-01-01T00:00:00",
+            "dataTermino": "2023-01-01T00:00:00",
+            "enderecos": [{
+                "logradouro": "AV BARATA RIBEIRO",
+                "numero": 400,
+                "bairro": "RANCHO GRANDE",
+                "cidadeId": 1,
+                "cidade": { "NomeCidade": "ITU", "Estado" : "SP" },
+                "cep": "13.300-199",
+                "tipo": 1,
+                "latitude": -26.0,
+                "longitude": -47.0,
+                "id": "5f6204e1-49ef-44f5-a8d3-342fe2ecf90b"
+              }],
+            "id": "d8c27a5f-4829-4fb6-ab60-718ef7cc2f0c"
+          }
+    ]
+}

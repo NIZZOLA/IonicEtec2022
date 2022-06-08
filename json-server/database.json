@@ -1,0 +1,34 @@
+{
+    "clientes": [
+        {
+            "id" : "6ee05544-0623-423b-9be6-37517912121f",
+            "cliente": true,
+            "fornecedor": false,
+            "fisica": true,
+            "nome": "JOSE DA SILVA",
+            "cpf": "000.000.000-00",
+            "dataDeNascimento": "2000-09-14",
+            "nomeFantasia": "",
+            "razaoSocial": "",
+            "cnpj": "",
+            "inscricaoEstadual": "",
+            "optanteDoSimples": false,
+            "observacoes": "MAL PAGADOR"
+        },
+        {
+            "id" : "39a4758e-de2f-47ea-997c-fe66db00d43e",
+            "cliente": true,
+            "fornecedor": false,
+            "fisica": true,
+            "nome": "",
+            "cpf": "",
+            "dataDeNascimento": "",
+            "nomeFantasia": "ETEC ITU",
+            "razaoSocial": "CENTRO PAULA SOUZA DE ENSINO",
+            "cnpj": "00.001.002/0001-22",
+            "inscricaoEstadual": "345.555.888-99",
+            "optanteDoSimples": false,
+            "observacoes": "TESTE"
+        }
+    ]
+}
