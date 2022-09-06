@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras } from '@angular/router';
 import { NavController } from '@ionic/angular';
-import { ClienteService } from 'src/services/cliente.service';
+import { ApiService } from '../../services/apiservice.service';
 
 @Component({
   selector: 'app-listagem',
@@ -10,7 +10,7 @@ import { ClienteService } from 'src/services/cliente.service';
 })
 export class ListagemPage implements OnInit {
   resultado : any = [];
-  constructor(private clientService: ClienteService, private navCtrl: NavController) {
+  constructor(private clientService: ApiService, private navCtrl: NavController) {
     console.log("carrega dados");
     this.CarregaDados();
    }

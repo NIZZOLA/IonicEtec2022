@@ -1,9 +1,87 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>consulta</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <h1>Consulta de Empreendimento</h1>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Cliente</ion-card-subtitle>
+      <ion-card-title>{{empreendimento.cliente}}</ion-card-title>
+      <ion-card-subtitle>Empreendimento</ion-card-subtitle>
+      <ion-card-title>{{empreendimento.nome}}</ion-card-title>
+
+    </ion-card-header>
+
+    <ion-row>
+      <ion-col>
+        Data do Orçamento
+      </ion-col>
+      <ion-col>
+        <ion-icon name="calendar-number-outline"></ion-icon>
+        {{empreendimento.dataOrcamento}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        Data do Início
+      </ion-col>
+      <ion-col>
+        <ion-icon name="calendar-number-outline"></ion-icon>
+        {{empreendimento.dataInicio}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        Previsão de Término
+      </ion-col>
+      <ion-col>
+        <ion-icon name="calendar-number-outline"></ion-icon>
+        {{empreendimento.dataInicio}}
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="empreendimento.dataTermino">
+      <ion-col>
+        Data do Término
+      </ion-col>
+      <ion-col>
+        <ion-icon name="calendar-number-outline"></ion-icon>
+        {{empreendimento.dataTermino}}
+
+      </ion-col>
+    </ion-row>
+    <h1>Endereços</h1>
+    <ion-item *ngFor="let ende of empreendimento.enderecos">
+    <ion-row>
+      <ion-col>
+        Rua
+        {{ende.logradouro}} nº {{ende.numero}}
+      </ion-col>
+      <ion-col>
+        {{ende.bairro}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        {{ende.cidade.NomeCidade}}/{{ende.cidade.Estado}}
+      </ion-col>
+    </ion-row>
+  </ion-item>
+
+
+    <ion-card-content>
+      conteudo de texto
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

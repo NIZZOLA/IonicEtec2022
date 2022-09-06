@@ -1,8 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Listagem de Clientes</ion-title>
+    <ion-buttons slot="start">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      
+    <ion-title><ion-icon name="body-outline"></ion-icon> Listagem de Clientes</ion-title>
+    
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
+
 
 <ion-content [fullscreen]="true">
     
@@ -25,7 +34,7 @@
         <ion-item-option color="danger" (click)="openPageClientes(cli.id)">
           <ion-icon slot="icon-only" name="search"></ion-icon>
         </ion-item-option>
-        <ion-item-option  (click)="openPageEmpreendimentos(1)">
+        <ion-item-option (click)="openPageEmpreendimentos(1)" title="Empreendimentos">
           <ion-icon slot="icon-only" name="home"></ion-icon>
         </ion-item-option>
       </ion-item-options>
